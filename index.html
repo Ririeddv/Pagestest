@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>MegaBox Kio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #00008b, #ff69b4);
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header img {
+            margin-right: 10px;
+            height: 40px;
+        }
+        .video-section {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 182, 193, 0.1);
+            border-radius: 10px;
+        }
+        .video-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .video-thumbnail {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .add-button {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ff1493;
+        }
+        .video-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .video-description {
+            display: none;
+            margin-top: 10px;
+            background: rgba(255, 192, 203, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .social-media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+    <script>
+        // Función para mostrar/ocultar la descripción del video
+        function toggleDescription(id) {
+            const description = document.getElementById(`description-${id}`);
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo1.png" alt="Logo de MegaBox Kio" style="height: 120px;">
+    </header>
+
+    <!-- Sección de Video 1 -->
+    <div class="video-section">
+        <div class="video-title">Arcane temporada 1</div>
+        <div class="video-thumbnail" style="background-image: url('cartel1.png');" onclick="window.location.href='videoAr1/página arcane temp1.html'"></div>
+        <div class="video-info">
+            <span></span>
+            <span></span>
+            <span class="add-button" onclick="toggleDescription(1)">+</span>
+        </div>
+        <div class="video-description" id="description-1">
+            ✨Capitulos:09/09✨
+            
+        </div>
+    </div>
+
+    <!-- Sección de Video 2 -->
+    <div class="video-section">
+        <div class="video-title">Arcane temporada 2</div>
+        <div class="video-thumbnail" style="background-image: url('cartel2.png');" onclick="window.location.href='videoAr2/página arcane temp2.html'"></div>
+        <div class="video-info">
+            <span></span>
+            <span></span>
+            <span class="add-button" onclick="toggleDescription(2)">+</span>
+        </div>
+        <div class="video-description" id="description-2">
+            ✨Capitulos:09/09✨
+     
+        </div>
+    </div>
+
+    <!-- Sección de Video 3 -->
+    <div class="video-section">
+        <div class="video-title">DanDaDan</div>
+        <div class="video-thumbnail" style="background-image: url('cartel3.png');" onclick="window.location.href='DanDaDan/página dandadan.html'"></div>
+        <div class="video-info">
+            <span></span>
+            <span></span>
+            <span class="add-button" onclick="toggleDescription(3)">+</span>
+        </div>
+        <div class="video-description" id="description-3">
+            ✨Capitulos:06/12✨
+        </div>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="social-media">
+        <div class="social-link" style="background-color: blue;" onclick="window.location.href='https://www.facebook.com/profile.php?id=61569152283393'">Facebook</div>
+        <div class="social-link" style="background-color: red;" onclick="window.location.href='https://youtube.com/@giorgykruz?si=uzKHdzBVOzVrjEpt'">Youtube</div>
+    </div>
+</body>
+</html>
